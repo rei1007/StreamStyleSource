@@ -1,0 +1,66 @@
+@import url(property.css);
+
+.news_card {
+    margin: 12px auto 0;
+    border-radius: 12px;
+    background-color: var(--container-surface);
+    padding: 1rem;
+    width: 100%;
+    max-width: var(--max-width);
+    height: fit-content;
+    color: var(--on-surface);
+
+    p {
+        font-size: 1rem;
+        line-height: 150%;
+    }
+    hr {
+        margin: 12px 0;
+    }
+}
+.news_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+
+    h4 {
+        font-size: 1.5rem;
+        color: var(--secondary);
+        font-weight: 700;
+        line-height: 150%;
+    }
+    a {
+        border-radius: 12px;
+        padding: 4px 12px;
+        font-size: 1rem;
+        line-height: 150%;
+        text-decoration: none;
+        background-color: var(--secondary);
+        color: var(--on-secondary);
+    }
+}
+.chip_box {
+    display: flex;
+    gap: 0.5rem;
+    .chip {
+        width: fit-content;
+        padding: 4px 12px;
+        font-size: 1rem;
+        line-height: 150%;
+        border-radius: calc(0.5rem * 1.5 + 4px);
+    }
+    .date_chip {
+        background-color: var(--tertiary);
+        color: var(--on-tertiary);
+    }
+    .bs_chip {
+        background-color: #adc3f3;
+    }
+    .kinds_chip {
+        background-color: #adc3f3;
+    }
+    .info_chip {
+        background-color: #adf3b3;
+    }
+}

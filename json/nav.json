@@ -1,0 +1,266 @@
+{
+    "indexNavItems": [
+        {
+            "type": "current",
+            "icon": "material-symbols-rounded fill",
+            "iconName": "home",
+            "text": "ホーム",
+            "link": null
+        },
+        {
+            "type": "link",
+            "icon": "material-symbols-rounded",
+            "iconName": "category",
+            "text": "コンテンツ",
+            "link": "contents.html"
+        },
+        {
+            "type": "link",
+            "icon": "material-symbols-rounded",
+            "iconName": "new_releases",
+            "text": "更新情報",
+            "link": "news.html"
+        },
+        {
+            "type": "link",
+            "icon": "material-symbols-rounded",
+            "iconName": "developer_guide",
+            "text": "利用規約",
+            "link": "terms.html"
+        }
+    ],
+    "contentsNavItems": [
+        {
+            "type": "link",
+            "icon": "material-symbols-rounded",
+            "iconName": "home",
+            "text": "ホーム",
+            "link": "index.html"
+        },
+        {
+            "type": "current",
+            "icon": "material-symbols-rounded fill",
+            "iconName": "category",
+            "text": "コンテンツ",
+            "link": null
+        },
+        {
+            "type": "link",
+            "icon": "material-symbols-rounded",
+            "iconName": "new_releases",
+            "text": "更新情報",
+            "link": "news.html"
+        },
+        {
+            "type": "link",
+            "icon": "material-symbols-rounded",
+            "iconName": "developer_guide",
+            "text": "利用規約",
+            "link": "terms.html"
+        }
+    ],
+    "newsNavItems": [
+        {
+            "type": "link",
+            "icon": "material-symbols-rounded",
+            "iconName": "home",
+            "text": "ホーム",
+            "link": "index.html"
+        },
+        {
+            "type": "link",
+            "icon": "material-symbols-rounded",
+            "iconName": "category",
+            "text": "コンテンツ",
+            "link": "contents.html"
+        },
+        {
+            "type": "current",
+            "icon": "material-symbols-rounded fill",
+            "iconName": "new_releases",
+            "text": "更新情報",
+            "link": null
+        },
+        {
+            "type": "link",
+            "icon": "material-symbols-rounded",
+            "iconName": "developer_guide",
+            "text": "利用規約",
+            "link": "terms.html"
+        }
+    ],
+    "termsNavItems": [
+        {
+            "type": "link",
+            "icon": "material-symbols-rounded",
+            "iconName": "home",
+            "text": "ホーム",
+            "link": "index.html"
+        },
+        {
+            "type": "link",
+            "icon": "material-symbols-rounded",
+            "iconName": "category",
+            "text": "コンテンツ",
+            "link": "contents.html"
+        },
+        {
+            "type": "link",
+            "icon": "material-symbols-rounded",
+            "iconName": "new_releases",
+            "text": "更新情報",
+            "link": "news.html"
+        },
+        {
+            "type": "current",
+            "icon": "material-symbols-rounded fill",
+            "iconName": "developer_guide",
+            "text": "利用規約",
+            "link": null
+        }
+    ],
+    "indexMobileNavItems": [
+        {
+            "type": "top",
+            "icon": "material-symbols-rounded",
+            "iconName": "arrow_circle_up",
+            "link": "#"
+        },
+        {
+            "type": "current",
+            "icon": "material-symbols-rounded fill",
+            "iconName": "home",
+            "text": "ホーム",
+            "link": null
+        },
+        {
+            "type": "link",
+            "icon": "material-symbols-rounded",
+            "iconName": "category",
+            "text": "コンテンツ",
+            "link": "contents.html"
+        },
+        {
+            "type": "link",
+            "icon": "material-symbols-rounded",
+            "iconName": "new_releases",
+            "text": "更新情報",
+            "link": "news.html"
+        },
+        {
+            "type": "link",
+            "icon": "material-symbols-rounded",
+            "iconName": "developer_guide",
+            "text": "利用規約",
+            "link": "terms.html"
+        }
+    ],
+    "contentsMobileNavItems": [
+        {
+            "type": "top",
+            "icon": "material-symbols-rounded",
+            "iconName": "arrow_circle_up",
+            "link": "#"
+        },
+        {
+            "type": "link",
+            "icon": "material-symbols-rounded fill",
+            "iconName": "home",
+            "text": "ホーム",
+            "link": "index.html"
+        },
+        {
+            "type": "current",
+            "icon": "material-symbols-rounded",
+            "iconName": "category",
+            "text": "コンテンツ",
+            "link": null
+        },
+        {
+            "type": "link",
+            "icon": "material-symbols-rounded",
+            "iconName": "new_releases",
+            "text": "更新情報",
+            "link": "news.html"
+        },
+        {
+            "type": "link",
+            "icon": "material-symbols-rounded",
+            "iconName": "developer_guide",
+            "text": "利用規約",
+            "link": "terms.html"
+        }
+    ],
+    "newsMobileNavItems": [
+        {
+            "type": "top",
+            "icon": "material-symbols-rounded",
+            "iconName": "arrow_circle_up",
+            "link": "#"
+        },
+        {
+            "type": "link",
+            "icon": "material-symbols-rounded",
+            "iconName": "home",
+            "text": "ホーム",
+            "link": "index.html"
+        },
+        {
+            "type": "link",
+            "icon": "material-symbols-rounded",
+            "iconName": "category",
+            "text": "コンテンツ",
+            "link": "contents.html"
+        },
+        {
+            "type": "current",
+            "icon": "material-symbols-rounded fill",
+            "iconName": "new_releases",
+            "text": "更新情報",
+            "link": null
+        },
+        {
+            "type": "link",
+            "icon": "material-symbols-rounded",
+            "iconName": "developer_guide",
+            "text": "利用規約",
+            "link": "terms.html"
+        }
+    ],
+    "termsMobileNavItems": [
+        {
+            "type": "top",
+            "icon": "material-symbols-rounded",
+            "iconName": "arrow_circle_up",
+            "link": "#"
+        },
+        {
+            "type": "link",
+            "icon": "material-symbols-rounded",
+            "iconName": "home",
+            "text": "ホーム",
+            "link": "index.html"
+        },
+        {
+            "type": "link",
+            "icon": "material-symbols-rounded",
+            "iconName": "category",
+            "text": "コンテンツ",
+            "link": "contents.html"
+        },
+        {
+            "type": "link",
+            "icon": "material-symbols-rounded",
+            "iconName": "new_releases",
+            "text": "更新情報",
+            "link": "news.html"
+        },
+        {
+            "type": "current",
+            "icon": "material-symbols-rounded fill",
+            "iconName": "developer_guide",
+            "text": "利用規約",
+            "link": null
+        }
+    ]
+}

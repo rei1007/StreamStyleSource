@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+    <head>
+        <title>配信StyleSource - 配信者・Vtuber向けOBSブラウザソース</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--検索-->
+        <meta name="description" content="Live配信で便利なOBS用ブラウザソースを無料で提供しています。web上でもダウンロードしてローカルでも使用可能。配信者・Vtuberの方の配信ライフをお手伝いします。">
+        <meta name="keywords" content="OBS, ブラウザソース, 配信素材, Vtuber, 無料, ダウンロード, 配信画面, カスタマイズ">
+        <!--OGP-->
+        <meta property="og:title" content="配信StyleSource  - 配信者・Vtuber向けOBSブラウザソース">
+        <meta property="og:description" content="Live配信で便利なOBS用ブラウザソースを無料で提供しています。web上でもダウンロードしてローカルでも使用可能。配信者・Vtuberの方の配信ライフをお手伝いします。">
+        <meta property="og:url" content="https://www.example.com/">
+        <meta property="og:image" content="https://www.example.com/images/ogp.jpg">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="配信StyleSource ">
+        <!--外部ファイル-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,300..400,0..1,0&display=swap" media="print" onload="this.media='all'">
+        <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+        <link href="https://unpkg.com/@acab/reset.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <dody>
+        <!--共通-->
+        <div id="load">
+            <div class="loader"></div>
+        </div>
+        <header>
+            <span class="material-symbols-rounded fill">stream</span>
+            <h1>配信StyleSource </h1>
+        </header>
+        <nav id="nav_PC"></nav>
+        <nav id="nav_mobile"></nav>
+
+        <!--ページ-->
+        <div id="page">
+            <div class="card important_card">
+                <div class="card_title">
+                    <span class="material-symbols-rounded">developer_guide</span>
+                    <h3>利用規約</h3>
+                </div>
+                <div class="card_body">
+                    <div class="list">
+                        <div>
+                            <span class="material-symbols-rounded ok">check_circle</span>
+                            <p>個人/法人問わず営利目的での利用が可能です。</p>
+                        </div>
+                        <div>
+                            <span class="material-symbols-rounded ok">check_circle</span>
+                            <p>クレジットの表記や使用報告の必要はありません。もしクレジットを記載して頂ける場合は当サイトのURLをお願いします。</p>
+                        </div>
+                        <div>
+                            <span class="material-symbols-rounded no">cancel</span>
+                            <p>再配布及び自作発言は禁止です。</p>
+                        </div>
+                        <div>
+                            <span class="material-symbols-rounded no">check_circle</span>
+                            <p>使用用途に合わせてソースコード改変していただくことが可能です。この場合改変元を明記し本規約の内容を継承したうえで、改変後のソースコードを配布することが可能です。</p>
+                        </div>
+                        <div>
+                            <span class="material-symbols-rounded info">info</span>
+                            <p>コンテンツの利用に際して問題が発生した場合、制作者は一切の責任を負いません。</p>
+                        </div>
+                        <div>
+                            <span class="material-symbols-rounded info">info</span>
+                            <p>本規約は制作者の判断により変更される場合があります。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tip important_tip page_end">
+                <span class="material-symbols-rounded">warning</span>
+                <p>上記の利用規約はれーが制作した、当サイト及びBOOTH「れーの部屋」のすべてのコンテンツが対象です。ただし利用規約が別途設定されているものについてはそちらの規約が優先されます。</p>
+            </div>
+        </div>
+
+        <!--フッター-->
+        <footer id="footer"></footer>
+        
+        <script src="script/script.js"></script>
+        <script src="script/nav.js"></script>
+    </body>
+</html>

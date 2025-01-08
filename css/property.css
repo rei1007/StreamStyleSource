@@ -1,0 +1,25 @@
+:root {
+    --primary: #056b5b;
+    --on-primary: #ffffff;
+    --primary-container: #84d6c2;
+    --on-primary-container: #00382f;
+    --secondary: #4a635d;
+    --on-secondary: #ffffff;
+    --tertiary: #26465b;
+    --on-tertiary: #ffffff;
+    --tertiary-container: #c8e6ff;
+    --important: #93000a;
+    --important-container: #ffb4ab;
+    --on-important-container: #690005;
+    --surface: #cde8e0;
+    --container-surface: #e9efec;
+    --important-surface:#efeae9;
+    --on-surface: #171d1b;
+    --background: #f5fbf7;
+
+    --mobile-width: 800px;
+    --max-width: 1500px;
+
+    --main-font: "Zen Maru Gothic";
+    --icon-font:  "Material Symbols Rounded";
+}

@@ -1,0 +1,25 @@
+{
+    "profile": {
+        "name": "れー",
+        "xicon": "image/xicon.jpg",
+        "links": [
+            {
+                "href": "https://x.com/rei_x1007/",
+                "logo": "image/xlogo.jpg",
+                "text": "rei_x1007"
+            },
+            {
+                "href": "https://rei-1007.booth.pm/",
+                "logo": "image/boothlogo.svg",
+                "text": "れーの部屋"
+            }
+        ]
+    },
+    "contact": {
+        "emailIcon": "material-symbols-rounded",
+        "emailIconText": "alternate_email",
+        "title": "お問い合わせ",
+        "text": "コンテンツに関するご質問やご要望、制作のご依頼などのお問い合わせは制作者のXアカウントのDMまでよろしくお願いします。\nお問い合わせについてはできる限り早急に返信させていただきますが、状況によってはご回答まで5日程度お時間をいただく場合がございます。"
+    },
+    "copyright": "© 2025 Rei1007"
+}

@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    <head>
+        <title>配信StyleSource - 配信者・Vtuber向けOBSブラウザソース</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--検索-->
+        <meta name="description" content="Live配信で便利なOBS用ブラウザソースを無料で提供しています。web上でもダウンロードしてローカルでも使用可能。配信者・Vtuberの方の配信ライフをお手伝いします。">
+        <meta name="keywords" content="OBS, ブラウザソース, 配信素材, Vtuber, 無料, ダウンロード, 配信画面, カスタマイズ">
+        <!--OGP-->
+        <meta property="og:title" content="配信StyleSource - 配信者・Vtuber向けOBSブラウザソース">
+        <meta property="og:description" content="Live配信で便利なOBS用ブラウザソースを無料で提供しています。web上でもダウンロードしてローカルでも使用可能。配信者・Vtuberの方の配信ライフをお手伝いします。">
+        <meta property="og:url" content="https://www.example.com/">
+        <meta property="og:image" content="https://www.example.com/images/ogp.jpg">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="配信StyleSource">
+        <!--外部ファイル-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,300..400,0..1,0&display=swap" media="print" onload="this.media='all'">
+        <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+        <link href="https://unpkg.com/@acab/reset.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <!--共通-->
+        <div id="load">
+            <div class="loader"></div>
+        </div>
+        <header>
+            <span class="material-symbols-rounded fill">stream</span>
+            <h1>配信StyleSource</h1>
+        </header>
+        <nav id="nav_PC"></nav>
+        <nav id="nav_mobile"></nav>
+
+        <!--ページ-->
+        <div id="page">
+            <div class="card">
+                <div class="card_title">
+                    <span class="material-symbols-rounded">home</span>
+                    <h3>ホーム</h3>
+                </div>
+            </div>
+        </div>
+
+        <!--フッター-->
+        <footer id="footer"></footer>
+        
+        <script src="script/script.js"></script>
+        <script src="script/nav.js"></script>
+    </body>
+</html>
