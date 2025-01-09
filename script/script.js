@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			<div id="contact">
 				<div id="profile">
 					<div id="profile_title">
-						<img id="xicon" src="${footerData.profile.xicon} alt="Xプロフィールアイコン">
+						<img id="xicon" src="${footerData.profile.xicon}" alt="Xプロフィールアイコン">
 						<div>
 							<p>制作者</p>
 							<h3>${footerData.profile.name}</h3>
