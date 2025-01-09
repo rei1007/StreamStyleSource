@@ -43,6 +43,7 @@
 .chip_box {
     display: flex;
     gap: 0.5rem;
+    
     .chip {
         width: fit-content;
         padding: 4px 12px;

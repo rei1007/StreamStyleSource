@@ -309,6 +309,9 @@ header {
         .no {
             background-color: #ffc2ce;
         }
+        .attention {
+            background-color: #ffdbad;
+        }
         .info {
             background-color: #acd6e9;
         }
