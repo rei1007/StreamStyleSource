@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Allow: /contents/
+Disallow: /script/
+Disallow: /json/
+Disallow: /image/
+Disallow: /font/
+Disallow: /css/
+Sitemap: https://streamstylesource.pages.dev/sitemap.xml
