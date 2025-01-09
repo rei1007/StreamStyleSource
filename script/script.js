@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			<div id="contact">
 				<div id="profile">
 					<div id="profile_title">
-						<img id="xicon" src="${footerData.profile.xicon}">
+						<img id="xicon" src="${footerData.profile.xicon} alt="Xプロフィールアイコン">
 						<div>
 							<p>制作者</p>
 							<h3>${footerData.profile.name}</h3>
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
 					<hr>
 					<div id="link">
 						${footerData.profile.links.map(link => `
-							<button><a href="${link.href}"></a><img src="${link.logo}">${link.text}</button>
+							<button><a href="${link.href}" aria-label="${link.alabel}"></a><img src="${link.logo}" alt="${link.alt}">${link.text}</button>
 							`).join("")}
 					</div>
 				</div>

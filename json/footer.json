@@ -1,16 +1,20 @@
 {
     "profile": {
         "name": "れー",
-        "xicon": "image/xicon.jpg",
+        "xicon": "image/xicon.webp",
         "links": [
             {
                 "href": "https://x.com/rei_x1007/",
-                "logo": "image/xlogo.jpg",
+                "alabel": "Xプロフィール",
+                "logo": "image/xlogo.webp",
+                "alt": "Xロゴ",
                 "text": "rei_x1007"
             },
             {
                 "href": "https://rei-1007.booth.pm/",
+                "alabel": "BOOTHストアページ",
                 "logo": "image/boothlogo.svg",
+                "alt": "BOOTHロゴ",
                 "text": "れーの部屋"
             }
         ]
