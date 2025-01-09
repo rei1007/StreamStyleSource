@@ -28,6 +28,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
         <link href="https://unpkg.com/@acab/reset.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
+        <link href="css/contents.css" rel="stylesheet">
     </head>
     <body>
         <!--共通-->
@@ -49,6 +50,22 @@
                     <h3>コンテンツ</h3>
                 </div>
             </div>
+
+            <div class="contents_card">
+                <h4>マテリアル時計</h4>
+                <div class="contents_thumbnail">
+                    <img src="image/material-clock.png" alt="「マテリアル時計」サムネイル">
+                </div>
+                <div class="clipboard_link">
+                    <input type="text" value="https://sss-contnts.page.dev/material-clock/" readonly>
+                    <button onclick="copyToClipboard(this)"><span class="material-symbols-rounded">content_copy</span></button>
+                </div>
+                <div class="read_more" >
+                    <a href="#"></a>
+                    <span class="material-symbols-rounded">tune</span>
+                    <p>詳細/カスタマイズ</p>
+                </div> 
+            </div>
         </div>
 
         <!--フッター-->
@@ -56,5 +73,6 @@
         
         <script src="script/script.js"></script>
         <script src="script/nav.js"></script>
+        <script src="script/contents.js"></script>
     </body>
 </html>
