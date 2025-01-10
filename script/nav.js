@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     } else {
                        navHTML += `
                             <li>
-                                <a href="${item.link}">
+                                <a href="https://streamstylesource.pages.dev/${item.link}">
                                     <span class="${item.icon}">${item.iconName}</span><p>${item.text}</p>
                                 </a>
                             </li>
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     if (item.type === "top") {
                         topButton = `
                             <li id="page_up">
-                                <a href="${item.link}">
+                                <a href="#">
                                   <span class="${item.icon}">${item.iconName}</span>
                                   <p>TOP</p>
                                 </a>
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     } else {
                        navHTML += `
                             <li>
-                                <a href="${item.link}">
+                                <a href="https://streamstylesource.pages.dev/${item.link}">
                                     <span class="${item.icon}">${item.iconName}</span><p>${item.text}</p>
                                 </a>
                             </li>

@@ -278,6 +278,12 @@ header {
         font-size: 2rem;
         line-height: 150%;
     }
+    h4 {
+        color: var(--secondary);
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 150%;
+    }
 }
 .card_body {
     color: var(--on-surface);
