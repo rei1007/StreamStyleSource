@@ -60,23 +60,17 @@ document.addEventListener("DOMContentLoaded", function() {
             let navHTML = "<ul>";
             if (navData[mobileNavKey]) {
                 let topButton = "";
-                let currentFound = false;
-                 let firstItem = null;
-                navData[mobileNavKey].forEach((item,index) => {
-                  if (index === 0){
-                     firstItem = item;
-                     return;
-                  }
-                  if (item.type === "top"){
-                      topButton = `
-                           <li id="page_up">
+                navData[mobileNavKey].forEach(item => {
+                    if (item.type === "top") {
+                        topButton = `
+                            <li id="page_up">
                                 <a href="#">
                                   <span class="${item.icon}">${item.iconName}</span>
                                   <p>TOP</p>
                                 </a>
                             </li>
                         `;
-                   } else if (item.type === "current") {
+                    } else if (item.type === "current") {
                        navHTML += topButton;
                        navHTML += `
                             <li id="now_page_mobile">
@@ -85,10 +79,9 @@ document.addEventListener("DOMContentLoaded", function() {
                                 </div>
                             </li>
                         `;
-                     currentFound = true;
-                   } else {
+                    } else {
                        navHTML += `
-                            <li${item.contentsLink}>
+                            <li>
                                 <a href="https://streamstylesource.pages.dev/${item.link}">
                                     <span class="${item.icon}">${item.iconName}</span><p>${item.text}</p>
                                 </a>
@@ -96,26 +89,11 @@ document.addEventListener("DOMContentLoaded", function() {
                         `;
                     }
                 });
-                 if (!currentFound) {
-                     if (firstItem.type === "top"){
-                         navHTML += `
-                           <li id="page_up">
-                                <a href="#">
-                                  <span class="${firstItem.icon}">${firstItem.iconName}</span>
-                                  <p>TOP</p>
-                                </a>
-                            </li>
-                        `;
-                     }
-                    
-                   }
-                
             } else {
                 console.error("JSONファイルに'" + mobileNavKey + "'というキーが存在しません。");
             }
-             
             navHTML += "</ul>";
             nav.innerHTML = navHTML;
         })
-        .catch(error => console.error("nav.jsonファイルの読み込みエラー:", error));
+    .catch(error => console.error("nav.jsonファイルの読み込みエラー:", error));
 });
