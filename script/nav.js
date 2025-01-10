@@ -74,9 +74,9 @@ document.addEventListener("DOMContentLoaded", function() {
                        navHTML += topButton;
                        navHTML += `
                             <li id="now_page_mobile">
-                                <div>
+                                <a href="#">
                                     <span class="${item.icon}">${item.iconName}</span><p>${item.text}</p>
-                                </div>
+                                </a>
                             </li>
                         `;
                     } else {

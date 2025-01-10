@@ -9,25 +9,6 @@ window.onload = function () {
 	});
 };
 
-//ページトップに戻る
-window.addEventListener("scroll", function () {
-	let scrollHeight = document.documentElement.scrollHeight;
-	let scrollTop = document.documentElement.scrollTop;
-	let windowHeight = window.innerHeight;
-	let eightyPercentHeight = windowHeight * 1.2;
-
-	let pageTop = document.getElementById("page_up");
-	let nowPage = document.getElementById("now_page_mobile");
-
-	if (scrollTop > eightyPercentHeight) {
-		pageTop.classList.add("show");
-		nowPage.classList.add("hidden");
-	} else {
-		pageTop.classList.remove("show");
-		nowPage.classList.remove("hidden");
-	}
-});
-
 //フッター
 document.addEventListener("DOMContentLoaded", function () {
 	fetch("https://streamstylesource.pages.dev/json/footer.json")

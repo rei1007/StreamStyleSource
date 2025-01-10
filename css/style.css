@@ -212,22 +212,8 @@ header {
         color: var(--secondary);
         text-decoration: none;
     }
-    #page_up {
-        display: none;
-    }
-    #page_up.show {
-        display: block;
-    }
-    #now_page_mobile div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    #now_page_mobile {
         color: var(--primary);
-        font-size: 5rem;
-    }
-    #now_page_mobile.hidden {
-        display: none;
     }
     .material-symbols-rounded {
         font-size: 1.8rem;

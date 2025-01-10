@@ -151,12 +151,6 @@
     ],
     "indexMobileNavItems": [
         {
-            "type": "top",
-            "icon": "material-symbols-rounded",
-            "iconName": "arrow_circle_up",
-            "link": "#"
-        },
-        {
             "type": "current",
             "icon": "material-symbols-rounded fill",
             "iconName": "home",
@@ -186,12 +180,6 @@
         }
     ],
     "contentsMobileNavItems": [
-        {
-            "type": "top",
-            "icon": "material-symbols-rounded",
-            "iconName": "arrow_circle_up",
-            "link": "#"
-        },
         {
             "type": "link",
             "icon": "material-symbols-rounded",
@@ -223,12 +211,6 @@
     ],
     "newsMobileNavItems": [
         {
-            "type": "top",
-            "icon": "material-symbols-rounded",
-            "iconName": "arrow_circle_up",
-            "link": "#"
-        },
-        {
             "type": "link",
             "icon": "material-symbols-rounded",
             "iconName": "home",
@@ -258,12 +240,6 @@
         }
     ],
     "termsMobileNavItems": [
-        {
-            "type": "top",
-            "icon": "material-symbols-rounded",
-            "iconName": "arrow_circle_up",
-            "link": "#"
-        },
         {
             "type": "link",
             "icon": "material-symbols-rounded",
@@ -295,43 +271,32 @@
     ],
     "contentsPageMobileNavItems": [
         {
-            "type": "top",
-            "icon": "material-symbols-rounded",
-            "iconName": "arrow_circle_up",
-            "link": "#",
-            "contentsLink": ""
-        },
-        {
             "type": "link",
             "icon": "material-symbols-rounded",
             "iconName": "home",
             "text": "ホーム",
-            "link": "index.html",
-            "contentsLink": ""
+            "link": "index.html"
         },
         {
             "type": "link",
             "icon": "material-symbols-rounded",
             "iconName": "category",
             "text": "コンテンツ",
-            "link": "contents.html",
-            "contentsLink": " id='now_page_mobile'"
+            "link": "contents.html"
         },
         {
             "type": "link",
             "icon": "material-symbols-rounded",
             "iconName": "new_releases",
             "text": "更新情報",
-            "link": "news.html",
-            "contentsLink": ""
+            "link": "news.html"
         },
         {
             "type": "link",
             "icon": "material-symbols-rounded",
             "iconName": "developer_guide",
             "text": "利用規約",
-            "link": "terms.html",
-            "contentsLink": ""
+            "link": "terms.html"
         }
     ]
 }
