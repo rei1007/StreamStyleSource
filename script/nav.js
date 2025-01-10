@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function() {
     } else if(pathParts.length === 1){
         pageName = pathParts[0].replace(".html","")
     }
-    console.log(pageName);
     const navKey = pageName ? pageName + "NavItems" : "indexNavItems"; //PC用
     const mobileNavKey = pageName ? pageName + "MobileNavItems" : "indexMobileNavItems" //mobile用
 
@@ -83,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     } else {
                        navHTML += `
                             <li>
-                                <a href="https://streamstylesource.pages.dev/${item.link}">
+                                <a href="https://streamstylesource.pages.dev/${item.link}"${item.contentsLink}>
                                     <span class="${item.icon}">${item.iconName}</span><p>${item.text}</p>
                                 </a>
                             </li>
@@ -97,12 +96,4 @@ document.addEventListener("DOMContentLoaded", function() {
             nav.innerHTML = navHTML;
         })
     .catch(error => console.error("nav.jsonファイルの読み込みエラー:", error));
-
-    contentPageLoad();    
 });
-
-function contentPageLoad() {
-    const listItems = document.getElementById("nav_mobile").querySelectorAll("li");
-    const secondListItem = listItems[1];
-    secondListItem.id = "now_page_mobile";
-}

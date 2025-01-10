@@ -194,14 +194,14 @@
         },
         {
             "type": "link",
-            "icon": "material-symbols-rounded fill",
+            "icon": "material-symbols-rounded",
             "iconName": "home",
             "text": "ホーム",
             "link": "index.html"
         },
         {
             "type": "current",
-            "icon": "material-symbols-rounded",
+            "icon": "material-symbols-rounded fill",
             "iconName": "category",
             "text": "コンテンツ",
             "link": null
@@ -312,7 +312,8 @@
             "icon": "material-symbols-rounded",
             "iconName": "category",
             "text": "コンテンツ",
-            "link": "contents.html"
+            "link": "contents.html",
+            "contentsLink": " id='now_page_mobile'"
         },
         {
             "type": "link",
