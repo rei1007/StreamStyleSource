@@ -81,11 +81,11 @@ document.addEventListener("DOMContentLoaded", function() {
                         `;
                     } else {
                        navHTML += `
-                            <li>
-                                <a href="https://streamstylesource.pages.dev/${item.link}"${item.contentsLink}>
+                            <li${item.contentsLink}>
+                                <a href="https://streamstylesource.pages.dev/${item.link}">
                                     <span class="${item.icon}">${item.iconName}</span><p>${item.text}</p>
                                 </a>
-                            </li>
+                            </li$>
                         `;
                     }
                 });
