@@ -96,5 +96,13 @@ document.addEventListener("DOMContentLoaded", function() {
             navHTML += "</ul>";
             nav.innerHTML = navHTML;
         })
-        .catch(error => console.error("nav.jsonファイルの読み込みエラー:", error));
+    .catch(error => console.error("nav.jsonファイルの読み込みエラー:", error));
+
+    contentPageLoad();    
 });
+
+function contentPageLoad() {
+    const listItems = document.getElementById("nav_mobile").querySelectorAll("li");
+    const secondListItem = listItems[1];
+    secondListItem.id = "now_page_mobile";
+}
