@@ -1,7 +1,19 @@
 document.addEventListener("DOMContentLoaded", function() {
     // 現在のページ名を取得
     const path = window.location.pathname;
-    const pageName = path.substring(path.lastIndexOf('/') + 1).replace(".html", "");
+    const pathParts = path.split('/').filter(part => part !== "");
+    let pageName = "index";
+    if (pathParts.length >= 2) {
+        const lastPart = pathParts[pathParts.length - 1].replace(".html", "");
+        if (lastPart === pathParts[pathParts.length -1]){
+            pageName = pathParts[pathParts.length - 2]
+        }else {
+           pageName = lastPart;
+        }
+    } else if(pathParts.length === 1){
+        pageName = pathParts[0].replace(".html","")
+    }
+    console.log(pageName);
     const navKey = pageName ? pageName + "NavItems" : "indexNavItems"; //PC用
     const mobileNavKey = pageName ? pageName + "MobileNavItems" : "indexMobileNavItems" //mobile用
 
