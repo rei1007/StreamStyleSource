@@ -6,12 +6,12 @@ document.addEventListener("DOMContentLoaded", function() {
     if (pathParts.length >= 2) {
         const lastPart = pathParts[pathParts.length - 1].replace(".html", "");
         if (lastPart === pathParts[pathParts.length -1]){
-            pageName = pathParts[pathParts.length - 2]
+            pageName = pathParts[pathParts.length - 2] + "Page";
         }else {
-           pageName = lastPart;
+           pageName = lastPart + "Page";
         }
     } else if(pathParts.length === 1){
-        pageName = pathParts[0].replace(".html","")
+        pageName = pathParts[0].replace(".html","");
     }
     console.log(pageName);
     const navKey = pageName ? pageName + "NavItems" : "indexNavItems"; //PC用
