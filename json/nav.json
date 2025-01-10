@@ -298,7 +298,8 @@
             "type": "top",
             "icon": "material-symbols-rounded",
             "iconName": "arrow_circle_up",
-            "link": "#"
+            "link": "#",
+            "contentsLink": ""
         },
         {
             "type": "link",

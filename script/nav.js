@@ -53,24 +53,30 @@ document.addEventListener("DOMContentLoaded", function() {
       .catch(error => console.error("nav.jsonファイルの読み込みエラー:", error));
 
     // ナビゲーション(mobile)の読み込み
-    fetch("../json/nav.json")
+    fetch("nav.json")
         .then(response => response.json())
         .then(navData => {
             const nav = document.getElementById("nav_mobile");
             let navHTML = "<ul>";
             if (navData[mobileNavKey]) {
                 let topButton = "";
-                navData[mobileNavKey].forEach(item => {
-                    if (item.type === "top") {
-                        topButton = `
-                            <li id="page_up">
+                let currentFound = false;
+                 let firstItem = null;
+                navData[mobileNavKey].forEach((item,index) => {
+                  if (index === 0){
+                     firstItem = item;
+                     return;
+                  }
+                  if (item.type === "top"){
+                      topButton = `
+                           <li id="page_up">
                                 <a href="#">
                                   <span class="${item.icon}">${item.iconName}</span>
                                   <p>TOP</p>
                                 </a>
                             </li>
                         `;
-                    } else if (item.type === "current") {
+                   } else if (item.type === "current") {
                        navHTML += topButton;
                        navHTML += `
                             <li id="now_page_mobile">
@@ -79,21 +85,37 @@ document.addEventListener("DOMContentLoaded", function() {
                                 </div>
                             </li>
                         `;
-                    } else {
+                     currentFound = true;
+                   } else {
                        navHTML += `
                             <li${item.contentsLink}>
                                 <a href="https://streamstylesource.pages.dev/${item.link}">
                                     <span class="${item.icon}">${item.iconName}</span><p>${item.text}</p>
                                 </a>
-                            </li$>
+                            </li>
                         `;
                     }
                 });
+                 if (!currentFound) {
+                     if (firstItem.type === "top"){
+                         navHTML += `
+                           <li id="page_up">
+                                <a href="#">
+                                  <span class="${firstItem.icon}">${firstItem.iconName}</span>
+                                  <p>TOP</p>
+                                </a>
+                            </li>
+                        `;
+                     }
+                    
+                   }
+                
             } else {
                 console.error("JSONファイルに'" + mobileNavKey + "'というキーが存在しません。");
             }
+             
             navHTML += "</ul>";
             nav.innerHTML = navHTML;
         })
-    .catch(error => console.error("nav.jsonファイルの読み込みエラー:", error));
+        .catch(error => console.error("nav.jsonファイルの読み込みエラー:", error));
 });
