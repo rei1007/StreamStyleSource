@@ -27,7 +27,13 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,300..400,0..1,0&display=swap" media="print" onload="this.media='all'">
         <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
         <link href="https://unpkg.com/@acab/reset.css" rel="stylesheet">
-        <link href="https://streamstylesource.pages.dev/css/style.css" rel="stylesheet">
+        <link href="../css/style.css" rel="stylesheet">
+        <style>
+            textarea {
+                background-color: white;
+                field-sizing: content;
+            }
+        </style>
     </head>
     <body>
         <!--共通-->
@@ -45,16 +51,110 @@
         <div id="page">
             <div class="card">
                 <div class="card_title">
-                    <span class="material-symbols-rounded">home</span>
+                    <span class="material-symbols-rounded">schedule</span>
                     <h3>マテリアル時計</h3>
                 </div>
+            </div>
+
+            <div class="card">
+                <h4>カスタマイズ</h4>
+                <div id="color-form">
+                    <div class="form-content">
+                        <label for="change-time-container-bg" class="form-label">全体背景色</label>
+                        <input id="change-time-container-bg" class="form-input" type="color">
+                    </div>
+                    <div class="form-content">
+                        <label for="change-live-color" class="form-label">Liveの文字色</label>
+                        <input id="change-live-color" class="form-input" type="color">
+                    </div>
+                    <div class="form-content">
+                        <label for="change-date-color" class="form-label">日付の文字色</label>
+                        <input id="change-date-color" class="form-input" type="color">
+                    </div>
+                    <div class="form-content">
+                        <label for="change-date-bg" class="form-label">日付の背景色</label>
+                        <input id="change-date-bg" class="form-input" type="color">
+                    </div>
+                    <div class="form-content">
+                        <label for="change-time-color" class="form-label">時間の文字色</label>
+                        <input id="change-time-color" class="form-input" type="color">
+                    </div>
+                    <div class="form-content">
+                        <label for="change-time-bg" class="form-label">時間の背景色</label>
+                        <input id="change-time-bg" class="form-input" type="color">
+                    </div>
+                </div>
+                <textarea id="output" readonly></textarea>
             </div>
         </div>
 
         <!--フッター-->
         <footer id="footer"></footer>
         
-        <script src="https://streamstylesource.pages.dev/script/script.js"></script>
-        <script src="https://streamstylesource.pages.dev/script/nav.js"></script>
+        <script src="../script/script.js"></script>
+        <script src="../script/nav.js"></script>
+        <script>
+            let colorForm = document.getElementById("color-form");
+            let output = document.getElementById("output");
+            
+            function setCookie(name, value, days) {
+                let expires = "";
+                if (days) {
+                    let date = new Date();
+                    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                    expires = "; expires=" + date.toUTCString();
+                }
+                document.cookie = name + "=" + (value || "") + expires + "; path=/";
+            }
+            
+            function getCookie(name) {
+                let nameEQ = name + "=";
+                let ca = document.cookie.split(';');
+                for (let i = 0; i < ca.length; i++) {
+                    let c = ca[i];
+                    while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                    if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+                }
+                return null;
+            }
+
+            // ページ読み込み時にクッキーから値を復元
+            let savedColors = getCookie('color-form-values');
+            if(savedColors){
+                try{
+                    let parsedColors = JSON.parse(savedColors);
+                    Object.keys(parsedColors).forEach(key => {
+                    let inputElement = document.getElementById(key);
+                    if(inputElement){
+                        inputElement.value = parsedColors[key];
+                    }
+                });
+                }catch (error){
+                    console.error("クッキーデータの解析に失敗しました",error);
+                }
+            }
+            updateOutput();
+
+            colorForm.addEventListener("input", function(event) {
+                if(event.target.classList.contains("form-input")){
+                updateOutput();
+                }
+            });
+
+
+            function updateOutput(){
+                let cssVariables = ":root {\n";
+                let inputs = colorForm.querySelectorAll("input");
+                let colors = {};
+                inputs.forEach(input => {
+                        let variableName = input.id.replace("change-", "--").replace(/-/g,"-");
+                        cssVariables += `    ${variableName}: ${input.value};\n`;
+                        colors[input.id] = input.value;
+                });
+                cssVariables += "}";
+                output.value = cssVariables;
+                setCookie('color-form-values', JSON.stringify(colors), 3); // クッキーに保存 (3日間)
+            }
+        </script>
     </body>
 </html>

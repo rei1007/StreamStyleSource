@@ -22,6 +22,8 @@
     --mobile-width: 800px;
     --max-width: 1500px;
 
+    --dynamic-header: calc(1.5rem + (2rem - 1.5rem) * (100vw - 800px) / (1200 - 800));
+
     --main-font: "Zen Maru Gothic";
     --icon-font:  "Material Symbols Rounded";
 }
