@@ -30,7 +30,7 @@ window.addEventListener("scroll", function () {
 
 //フッター
 document.addEventListener("DOMContentLoaded", function () {
-	fetch("../json/footer.json")
+	fetch("https://streamstylesource.pages.dev/json/footer.json")
 		.then(response => response.json())
 		.then(footerData => {
 			const footer = document.getElementById("footer");

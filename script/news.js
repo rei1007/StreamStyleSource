@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    fetch("../json/news.json")
+    fetch("https://streamstylesource.pages.dev/json/news.json")
         .then(response => response.json())
         .then(data => {
             const newsList = document.getElementById("news_list");

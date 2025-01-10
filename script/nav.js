@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const mobileNavKey = pageName ? pageName + "MobileNavItems" : "indexMobileNavItems" //mobile用
 
     // ナビゲーション(PC)の読み込み
-    fetch("../json/nav.json")
+    fetch("https://streamstylesource.pages.dev/json/nav.json")
         .then(response => response.json())
         .then(navData => {
             const nav = document.getElementById("nav_PC");
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
       .catch(error => console.error("nav.jsonファイルの読み込みエラー:", error));
 
     // ナビゲーション(mobile)の読み込み
-    fetch("nav.json")
+    fetch("https://streamstylesource.pages.dev/json/nav.json")
         .then(response => response.json())
         .then(navData => {
             const nav = document.getElementById("nav_mobile");
