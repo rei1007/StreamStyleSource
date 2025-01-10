@@ -305,7 +305,8 @@
             "icon": "material-symbols-rounded",
             "iconName": "home",
             "text": "ホーム",
-            "link": "index.html"
+            "link": "index.html",
+            "contentsLink": ""
         },
         {
             "type": "link",
@@ -320,14 +321,16 @@
             "icon": "material-symbols-rounded",
             "iconName": "new_releases",
             "text": "更新情報",
-            "link": "news.html"
+            "link": "news.html",
+            "contentsLink": ""
         },
         {
             "type": "link",
             "icon": "material-symbols-rounded",
             "iconName": "developer_guide",
             "text": "利用規約",
-            "link": "terms.html"
+            "link": "terms.html",
+            "contentsLink": ""
         }
     ]
 }
