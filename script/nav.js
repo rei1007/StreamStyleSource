@@ -59,11 +59,10 @@ document.addEventListener("DOMContentLoaded", function() {
             const nav = document.getElementById("nav_mobile");
             let navHTML = "<ul>";
             if (navData[mobileNavKey]) {
-                let topButton = "";
                 navData[mobileNavKey].forEach(item => {
-                    if (item.type === "top") {
-                        topButton = `
-                            <li id="page_up">
+                   if (item.type === "top") {
+                      navHTML += `
+                           <li id="page_up">
                                 <a href="#">
                                   <span class="${item.icon}">${item.iconName}</span>
                                   <p>TOP</p>
@@ -71,7 +70,6 @@ document.addEventListener("DOMContentLoaded", function() {
                             </li>
                         `;
                     } else if (item.type === "current") {
-                       navHTML += topButton;
                        navHTML += `
                             <li id="now_page_mobile">
                                 <a href="#">

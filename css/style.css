@@ -212,7 +212,7 @@ header {
         color: var(--secondary);
         text-decoration: none;
     }
-    #now_page_mobile {
+    #now_page_mobile a {
         color: var(--primary);
     }
     .material-symbols-rounded {
