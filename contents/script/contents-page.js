@@ -3,6 +3,7 @@ let iframe = document.getElementById("test");
 let urlOutput = document.getElementById("url_output");
 let cssOutput = document.getElementById("css_output");
 let presetButtons = document.querySelectorAll(".preset-button");
+let secDisplayToggle = document.getElementById("sec-display-toggle");
 
 //cookie保存
 function setCookie(name, value, days) {
@@ -60,7 +61,12 @@ function updateIframeSrc() {
           let key =  input.id.replace("change-", "--");
           colors[key] = input.value;
      });
-     let url = `https://sss-contents.pages.dev/material-clock.html#${encodeURIComponent(JSON.stringify(colors))}`;
+     if (secDisplayToggle.dataset.status === "on") {
+       colors["--sec-display"] = "flex";
+    } else {
+      colors["--sec-display"] = "none";
+    }
+    let url = `https://sss-contents.pages.dev/material-clock.html#${encodeURIComponent(JSON.stringify(colors))}`;
     iframe.src = url;
     urlOutput.value = url;
 }
@@ -97,7 +103,7 @@ fetch("json/material-clock.json")
             updateIframeSrc();
         }
     });
-
+    
 function applyPreset(presetName){
     if(presets[presetName]){
         const preset = presets[presetName];
@@ -106,7 +112,19 @@ function applyPreset(presetName){
             if(inputElement){
                 inputElement.value = preset[key];
             }
-            }
-            updateIframeSrc();
+        }
+        updateIframeSrc();
     }
 }
+
+// 秒数表示切り替え
+secDisplayToggle.addEventListener('click', function() {
+    if (this.dataset.status === "on") {
+        this.dataset.status = "off";
+        this.textContent = "OFF";
+    } else {
+        this.dataset.status = "on";
+        this.textContent = "ON";
+    }
+    updateIframeSrc();
+});
