@@ -5,11 +5,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--検索-->
-        <meta name="description" content="OBS用の配信時計です。シンプルなデザインのため、どのようなシュチュエーションでも使いやすいものとなっています。">
-        <meta name="keywords" content="OBS, 配信用時計, ブラウザソース, 配信素材, Vtuber, 無料, ダウンロード, 配信画面, カスタマイズ">
+        <meta name="description" content="OBS配信用のデジタル時計です。シンプルなデザインのため、どのようなシュチュエーションでも使いやすいものとなっています。">
+        <meta name="keywords" content="OBS, 配信用デジタル時計, ブラウザソース, 配信素材, Vtuber, 無料, ダウンロード, 配信画面, カスタマイズ">
         <!--OGP-->
         <meta property="og:title" content="マテリアル時計 by 配信StyleSource">
-        <meta property="og:description" content="OBS用の配信時計です。シンプルなデザインのため、どのようなシュチュエーションでも使いやすいものとなっています。">
+        <meta property="og:description" content="OBS配信用のデジタル時計です。シンプルなデザインのため、どのようなシュチュエーションでも使いやすいものとなっています。">
         <meta property="og:url" content="https://streamstylesource.pages.dev/contents/material-clock/">
         <meta property="og:image" content="https://www.example.com/images/ogp.jpg">
         <meta property="og:type" content="website">
@@ -28,12 +28,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
         <link href="https://unpkg.com/@acab/reset.css" rel="stylesheet">
         <link href="../css/style.css" rel="stylesheet">
-        <style>
-            textarea {
-                background-color: white;
-                field-sizing: content;
-            }
-        </style>
+        <link href="../css/contents-page.css" rel="stylesheet">
     </head>
     <body>
         <!--共通-->
@@ -93,68 +88,6 @@
         
         <script src="../script/script.js"></script>
         <script src="../script/nav.js"></script>
-        <script>
-            let colorForm = document.getElementById("color-form");
-            let output = document.getElementById("output");
-            
-            function setCookie(name, value, days) {
-                let expires = "";
-                if (days) {
-                    let date = new Date();
-                    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-                    expires = "; expires=" + date.toUTCString();
-                }
-                document.cookie = name + "=" + (value || "") + expires + "; path=/";
-            }
-            
-            function getCookie(name) {
-                let nameEQ = name + "=";
-                let ca = document.cookie.split(';');
-                for (let i = 0; i < ca.length; i++) {
-                    let c = ca[i];
-                    while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-                    if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
-                }
-                return null;
-            }
-
-            // ページ読み込み時にクッキーから値を復元
-            let savedColors = getCookie('color-form-values');
-            if(savedColors){
-                try{
-                    let parsedColors = JSON.parse(savedColors);
-                    Object.keys(parsedColors).forEach(key => {
-                    let inputElement = document.getElementById(key);
-                    if(inputElement){
-                        inputElement.value = parsedColors[key];
-                    }
-                });
-                }catch (error){
-                    console.error("クッキーデータの解析に失敗しました",error);
-                }
-            }
-            updateOutput();
-
-            colorForm.addEventListener("input", function(event) {
-                if(event.target.classList.contains("form-input")){
-                updateOutput();
-                }
-            });
-
-
-            function updateOutput(){
-                let cssVariables = ":root {\n";
-                let inputs = colorForm.querySelectorAll("input");
-                let colors = {};
-                inputs.forEach(input => {
-                        let variableName = input.id.replace("change-", "--").replace(/-/g,"-");
-                        cssVariables += `    ${variableName}: ${input.value};\n`;
-                        colors[input.id] = input.value;
-                });
-                cssVariables += "}";
-                output.value = cssVariables;
-                setCookie('color-form-values', JSON.stringify(colors), 3); // クッキーに保存 (3日間)
-            }
-        </script>
+        <script src="../script/contents-page.js"></script>
     </body>
 </html>
