@@ -50,24 +50,41 @@ fetch("json/material-clock.json")
                         inputElement.value = parsedColors[key];
                     }
                 });
+                let savedPreset = getCookie('selected-preset');
+                if(savedPreset){
+                     applyPreset(savedPreset);
+                     updatePresetButton(savedPreset);
+                }else{
+                    applyPreset('default');
+                   updatePresetButton('default');
+                }
+                let savedSecDisplay = getCookie('sec-display');
+                if(savedSecDisplay === "on"){
+                  secDisplayToggle.checked = true;
+                }else{
+                  secDisplayToggle.checked = false;
+                }
             } catch (error) {
                 console.error("クッキーデータの解析に失敗しました", error);
+                 applyPreset('default');
+                 updatePresetButton('default');
             }
         } else {
-             applyPreset('default');
-         }
-         updateOutput();
-         updateIframeSrc();
+            applyPreset('default');
+            updatePresetButton('default');
+        }
+       updateOutput();
+       updateIframeSrc();
     });
 
-//変更があったら反映する
+ //変更があったら反映する
 colorForm.addEventListener("input", function (event) {
     if (event.target.classList.contains("form-input")) {
         updateOutput();
         updateIframeSrc();
+        removeNowPreset();
     }
 });
-
 
 //iframe
 function updateIframeSrc() {
@@ -77,7 +94,7 @@ function updateIframeSrc() {
         let key = input.id.replace("change-", "--");
         colors[key] = input.value;
     });
-    if (secDisplayToggle.dataset.status === "on") {
+    if (secDisplayToggle.checked) {
         colors["--sec-display"] = "flex";
     } else {
         colors["--sec-display"] = "none";
@@ -86,7 +103,6 @@ function updateIframeSrc() {
     iframe.src = url;
     urlOutput.value = url;
 }
-
 
 //css書き出し
 function updateOutput() {
@@ -98,9 +114,15 @@ function updateOutput() {
         cssVariables += `    ${variableName}: ${input.value};\n`;
         colors[input.id] = input.value;
     });
+    if (secDisplayToggle.checked) {
+        cssVariables += `    --sec-display: flex;\n`;
+    }else{
+         cssVariables += `    --sec-display: none;\n`;
+    }
     cssVariables += "}";
     cssOutput.value = cssVariables;
     setCookie('color-form-values', JSON.stringify(colors), 3); // クッキーに保存 (3日間)
+    setCookie('sec-display', secDisplayToggle.checked ? 'on' : 'off',3);
 }
 
 function applyPreset(presetName) {
@@ -112,19 +134,31 @@ function applyPreset(presetName) {
                 inputElement.value = preset[key];
             }
         }
-        updateOutput(); // ★この行を追加
+        updateOutput();
         updateIframeSrc();
+        updatePresetButton(presetName)
+        setCookie('selected-preset', presetName, 3); // クッキーに保存 (3日間)
     }
 }
 
 // 秒数表示切り替え
-secDisplayToggle.addEventListener('click', function () {
-    if (this.dataset.status === "on") {
-        this.dataset.status = "off";
-        this.textContent = "OFF";
-    } else {
-        this.dataset.status = "on";
-        this.textContent = "ON";
-    }
+secDisplayToggle.addEventListener('change', function () {
     updateIframeSrc();
+    updateOutput();
 });
+
+
+function updatePresetButton(presetName) {
+    presetButtons.forEach(button => {
+        button.classList.remove('now_preset');
+        if(button.dataset.preset === presetName){
+            button.classList.add('now_preset');
+        }
+    });
+}
+
+function removeNowPreset(){
+    presetButtons.forEach(button =>{
+      button.classList.remove('now_preset');
+    });
+}

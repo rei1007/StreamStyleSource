@@ -28,7 +28,6 @@
     line-height: 150%;
 
     input {
-        position: relative;
         border: none;
         border-radius: 6px 0 0 6px;
         background-color: var(--secondary-container);
