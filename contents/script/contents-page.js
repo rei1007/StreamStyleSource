@@ -1,4 +1,4 @@
-let colorForm = document.getElementById("color-form");
+let colorForm = document.getElementById("color_form");
 let iframe = document.getElementById("test");
 let urlOutput = document.getElementById("url_output");
 let cssOutput = document.getElementById("css_output");
