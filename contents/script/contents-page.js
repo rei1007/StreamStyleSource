@@ -1,6 +1,10 @@
 let colorForm = document.getElementById("color-form");
-let output = document.getElementById("output");
+let iframe = document.getElementById("test");
+let urlOutput = document.getElementById("url_output");
+let cssOutput = document.getElementById("css_output");
+let presetButtons = document.querySelectorAll(".preset-button");
 
+//cookie保存
 function setCookie(name, value, days) {
     let expires = "";
     if (days) {
@@ -11,6 +15,7 @@ function setCookie(name, value, days) {
     document.cookie = name + "=" + (value || "") + expires + "; path=/";
 }
 
+//cookie取得
 function getCookie(name) {
     let nameEQ = name + "=";
     let ca = document.cookie.split(';');
@@ -39,13 +44,29 @@ if (savedColors) {
 }
 updateOutput();
 
+//変更があったら反映する
 colorForm.addEventListener("input", function (event) {
     if (event.target.classList.contains("form-input")) {
         updateOutput();
+        updateIframeSrc();
     }
 });
 
+//iframe
+function updateIframeSrc() {
+    let colors = {};
+    let inputs = colorForm.querySelectorAll("input");
+     inputs.forEach(input => {
+          let key =  input.id.replace("change-", "--");
+          colors[key] = input.value;
+     });
+     let url = `https://sss-contents.pages.dev/material-clock.html#${encodeURIComponent(JSON.stringify(colors))}`;
+    iframe.src = url;
+    urlOutput.value = url;
+}
+updateIframeSrc();
 
+//css書き出し
 function updateOutput() {
     let cssVariables = ":root {\n";
     let inputs = colorForm.querySelectorAll("input");
@@ -56,6 +77,36 @@ function updateOutput() {
         colors[input.id] = input.value;
     });
     cssVariables += "}";
-    output.value = cssVariables;
+    cssOutput.value = cssVariables;
     setCookie('color-form-values', JSON.stringify(colors), 3); // クッキーに保存 (3日間)
+}
+
+//プリセット
+fetch("json/material-clock.json")
+    .then(response => response.json())
+    .then(data => {
+        presets = data;
+        presetButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            applyPreset(this.dataset.preset);
+            });
+        });
+    });
+    colorForm.addEventListener("input", function(event) {
+        if(event.target.classList.contains("form-input")){
+            updateIframeSrc();
+        }
+    });
+
+function applyPreset(presetName){
+    if(presets[presetName]){
+        const preset = presets[presetName];
+        for(let key in preset){
+            let inputElement = document.getElementById(key.replace("--", "change-"));
+            if(inputElement){
+                inputElement.value = preset[key];
+            }
+            }
+            updateIframeSrc();
+    }
 }

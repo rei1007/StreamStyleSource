@@ -1,0 +1,19 @@
+#test {
+    border: none;
+    width: 250px;
+    height: 160px;
+}
+
+textarea {
+    background-color: white;
+    field-sizing: content;
+}
+
+.preset-button {
+    margin: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

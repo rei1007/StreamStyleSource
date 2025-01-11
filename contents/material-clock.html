@@ -28,7 +28,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
         <link href="https://unpkg.com/@acab/reset.css" rel="stylesheet">
         <link href="../css/style.css" rel="stylesheet">
-        <link href="../css/contents-page.css" rel="stylesheet">
+        <link href="css/contents-page.css" rel="stylesheet">
     </head>
     <body>
         <!--共通-->
@@ -53,6 +53,20 @@
 
             <div class="card">
                 <h4>カスタマイズ</h4>
+                <iframe id="test" src="https://sss-contents.pages.dev/material-clock"></iframe>
+                <div id="presets">
+                    <button class="preset-button" data-preset="default">デフォルト</button>
+                    <button class="preset-button" data-preset="darkmode">ダークモード</button>
+                    <button class="preset-button" data-preset="blue">ブルー</button>
+                    <button class="preset-button" data-preset="red">レッド</button>
+                    <button class="preset-button" data-preset="green">グリーン</button>
+                    <button class="preset-button" data-preset="yellow">イエロー</button>
+                    <button class="preset-button" data-preset="purple">パープル</button>
+                    <button class="preset-button" data-preset="orange">オレンジ</button>
+                    <button class="preset-button" data-preset="neon">ネオン</button>
+                    <button class="preset-button" data-preset="gray">グレー</button>
+                    <button class="preset-button" data-preset="wood">ウッド</button>
+                </div>
                 <div id="color-form">
                     <div class="form-content">
                         <label for="change-time-container-bg" class="form-label">全体背景色</label>
@@ -79,7 +93,8 @@
                         <input id="change-time-bg" class="form-input" type="color">
                     </div>
                 </div>
-                <textarea id="output" readonly></textarea>
+                <input id="url_output" type="text" readonly>
+                <textarea id="css_output" readonly></textarea>
             </div>
         </div>
 
@@ -88,6 +103,6 @@
         
         <script src="../script/script.js"></script>
         <script src="../script/nav.js"></script>
-        <script src="../script/contents-page.js"></script>
+        <script src="script/contents-page.js"></script>
     </body>
 </html>
