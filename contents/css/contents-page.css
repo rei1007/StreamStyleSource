@@ -1,7 +1,10 @@
 #custom_wrap {
+    background-color: var(--background);
+    padding: 1rem;
+    border-radius: 12px;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 24px;
     color: var(--on-surface);
     font-size: 1rem;
     line-height: 150%;
@@ -16,7 +19,7 @@
 #custom_input {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 24px;
 
     label {
         display: block;
@@ -101,6 +104,12 @@
         background-color: var(--primary);
         color: var(--on-primary);
     }
+}
+
+#color_form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
 

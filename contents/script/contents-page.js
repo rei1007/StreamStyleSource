@@ -41,38 +41,45 @@ fetch("json/material-clock.json")
         });
         // ページ読み込み時にクッキーから値を復元
         let savedColors = getCookie('color-form-values');
-        if (savedColors) {
+        let savedPreset = getCookie('selected-preset');
+         if (savedColors) {
             try {
                 let parsedColors = JSON.parse(savedColors);
                 Object.keys(parsedColors).forEach(key => {
                     let inputElement = document.getElementById(key);
                     if (inputElement) {
-                        inputElement.value = parsedColors[key];
+                         inputElement.value = parsedColors[key];
                     }
                 });
-                let savedPreset = getCookie('selected-preset');
-                if(savedPreset){
-                     applyPreset(savedPreset);
-                     updatePresetButton(savedPreset);
-                }else{
-                    applyPreset('default');
-                   updatePresetButton('default');
-                }
-                let savedSecDisplay = getCookie('sec-display');
-                if(savedSecDisplay === "on"){
-                  secDisplayToggle.checked = true;
-                }else{
-                  secDisplayToggle.checked = false;
-                }
+               if(savedPreset && presets[savedPreset]){
+                    applyPreset(savedPreset);
+                    updatePresetButton(savedPreset);
+                 }else{
+                      updatePresetButton("");
+                 }
             } catch (error) {
                 console.error("クッキーデータの解析に失敗しました", error);
-                 applyPreset('default');
-                 updatePresetButton('default');
+                  if(savedPreset && presets[savedPreset]){
+                     applyPreset(savedPreset);
+                     updatePresetButton(savedPreset);
+                 }else{
+                      applyPreset('default');
+                     updatePresetButton('default');
+                 }
             }
+        }else if(savedPreset && presets[savedPreset]){
+            applyPreset(savedPreset);
+           updatePresetButton(savedPreset);
         } else {
-            applyPreset('default');
-            updatePresetButton('default');
+             applyPreset('default');
+             updatePresetButton('default');
         }
+         let savedSecDisplay = getCookie('sec-display');
+         if(savedSecDisplay === "on"){
+            secDisplayToggle.checked = true;
+        }else{
+            secDisplayToggle.checked = false;
+         }
        updateOutput();
        updateIframeSrc();
     });
@@ -82,7 +89,8 @@ colorForm.addEventListener("input", function (event) {
     if (event.target.classList.contains("form-input")) {
         updateOutput();
         updateIframeSrc();
-        removeNowPreset();
+         removeNowPreset();
+         setCookie('selected-preset', "custom", 3);
     }
 });
 
@@ -137,7 +145,7 @@ function applyPreset(presetName) {
         updateOutput();
         updateIframeSrc();
         updatePresetButton(presetName)
-        setCookie('selected-preset', presetName, 3); // クッキーに保存 (3日間)
+         setCookie('selected-preset', presetName, 3); // クッキーに保存 (3日間)
     }
 }
 
@@ -147,13 +155,12 @@ secDisplayToggle.addEventListener('change', function () {
     updateOutput();
 });
 
-
 function updatePresetButton(presetName) {
     presetButtons.forEach(button => {
-        button.classList.remove('now_preset');
-        if(button.dataset.preset === presetName){
-            button.classList.add('now_preset');
-        }
+       button.classList.remove('now_preset');
+       if (presetName && button.dataset.preset === presetName) {
+          button.classList.add('now_preset');
+         }
     });
 }
 
