@@ -33,7 +33,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate3d(-50%,-50%,0);
+    transform: translate3d(-50%,-40%,0);
     z-index: 30;
     animation: l3 2s infinite;
     border-radius: 24px;
