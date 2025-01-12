@@ -1,10 +1,10 @@
 #custom_wrap {
-    background-color: var(--background);
-    padding: 1rem;
-    border-radius: 12px;
     display: flex;
     align-items: center;
     gap: 24px;
+    border-radius: 12px;
+    background-color: var(--background);
+    padding: 1rem;
     color: var(--on-surface);
     font-size: 1rem;
     line-height: 150%;
@@ -26,7 +26,6 @@
 
     label {
         display: block;
-        width: 6rem;
     }
 }
 
@@ -105,7 +104,7 @@
 
     label {
         padding: 4px 0;
-        width: 6rem;
+        width: 5rem;
     }
     .preset-button {
         transition: background-color 0.5s ease, color 0.5s ease;
@@ -123,11 +122,14 @@
     flex-wrap: wrap;
     gap: 1rem;
 
+    label {
+        width: 6rem;
+    }
     input {
-        background-color: var(--surface-container);
         border: none;
-        height: 1.5rem;
+        background-color: var(--surface-container);
         width: 3rem;
+        height: 1.5rem;
     }
 }
 
@@ -157,6 +159,7 @@
     position: relative;
     grid-template-columns: auto calc(8px + 1.5rem);
     width: 100%;
+    height: fit-content;
     line-height: 150%;
 
     textarea {
