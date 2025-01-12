@@ -1,8 +1,35 @@
 @import url(property.css);
 
+#contents_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.contents_card {
+    flex: 1; /* 追加 */
+    flex-basis: calc((100% / 2) -12px);
+    max-width: calc(100% / 2);
+    min-width: 160px;
+
+    @media (min-width: 600px) and (max-width: 1000px) {
+        flex-basis: calc((100% / 3) -24px);
+        max-width: calc(100% / 3);
+    }
+    @media (min-width: 1001px) {
+        flex-basis: calc((100% / 4) -36px);
+        max-width: calc(100% / 4);
+        min-width: 200px;
+    }
+}
+
 .contents_card {
     margin: 0;
-    max-width: 400px;
+
+    h4 {
+        font-size: 1.2rem;
+        line-height: 150%;
+    }
     p {
         width: fit-content;
         color: var(--on-surface);
@@ -22,33 +49,12 @@
     min-height: 100px;
     overflow-x: hidden;
 }
-.clipboard_link {
-    display: flex;
-    width: 100%;
-    line-height: 150%;
-
-    input {
-        border: none;
-        border-radius: 6px 0 0 6px;
-        background-color: var(--secondary-container);
-        padding: 4px 12px;
-        width: calc(100% - 8px - 1.5rem);
-        color: var(--on-secondary-container);
-        font-size: 1rem;
-    }
-    .material-symbols-rounded {
-        border-radius: 0 6px 6px 0;
-        background-color: var(--secondary);
-        padding: calc(4px + 0.25rem);
-        color: var(--on-secondary);
-        font-size: 1rem;
-    }
-}
 .learn_more {
     display: flex;
     position: relative;
     gap: 0.5rem;
     width: 100%;
+    padding-right: 0.5rem;
     width: fit-content;
     line-height: 150%;
     transition: 0.25s cubic-bezier(0.45, 0, 0.55, 1);

@@ -131,7 +131,28 @@
     }
 }
 
+.clipboard_link {
+    display: flex;
+    width: 100%;
+    line-height: 150%;
 
+    input {
+        border: none;
+        border-radius: 6px 0 0 6px;
+        background-color: var(--secondary-container);
+        padding: 4px 12px;
+        width: calc(100% - 8px - 1.5rem);
+        color: var(--on-secondary-container);
+        font-size: 1rem;
+    }
+    .material-symbols-rounded {
+        border-radius: 0 6px 6px 0;
+        background-color: var(--secondary);
+        padding: calc(4px + 0.25rem);
+        color: var(--on-secondary);
+        font-size: 1rem;
+    }
+}
 .clipboard_link_css {
     position: relative;
     grid-template-columns: auto calc(8px + 1.5rem);
