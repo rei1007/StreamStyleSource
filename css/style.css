@@ -397,6 +397,9 @@ header {
     overflow-x: hidden;
     color: var(--on-surface);
 
+    @media (max-width: 800px) {
+        padding: 12px;
+    }
     &::before {
         position: absolute;
         top: 0;
@@ -500,6 +503,6 @@ footer {
     height: fit-content;
 
     @media (max-width: 800px) {
-        margin: 24px 24px calc(2.6rem + 48px) 24px;
+        margin: 24px 12px calc(2.6rem + 48px) 12px;
     }
 }
