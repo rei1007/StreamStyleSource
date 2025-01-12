@@ -57,12 +57,28 @@
                 <div id="custom_wrap">
                     <iframe id="test" src="https://sss-contents.pages.dev/material-clock.html"></iframe>
                     <div id="custom_input">
-                        <div id="switch_sec" class="form_content">
-                            <label for="sec-display-toggle" class="form_label">秒数表示</label>
-                            <label class="switch">
-                                <input type="checkbox" id="sec-display-toggle" data-status="on">
-                                <span class="slider round"></span>
-                            </label>
+                        <div id="switch_container">
+                            <div id="switch_live" class="switch_box form_content">
+                                <label for="live-display-toggle" class="form_label">Live表示</label>
+                                <label class="switch">
+                                    <input type="checkbox" id="live-display-toggle" data-status="on" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div id="switch_sec" class="switch_box form_content">
+                                <label for="sec-display-toggle" class="form_label">秒数表示</label>
+                                <label class="switch">
+                                    <input type="checkbox" id="sec-display-toggle" data-status="on" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div id="switch_date" class="switch_box form_content">
+                                <label for="date-display-toggle" class="form_label">時刻のみ</label>
+                                <label class="switch">
+                                    <input type="checkbox" id="date-display-toggle" data-status="on">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
                         </div>
                         <hr>
                         <div id="presets">

@@ -30,7 +30,16 @@
     }
 }
 
-#switch_sec {
+#switch_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    
+    label {
+        width: 4.5rem;
+    }
+}
+.switch_box {
     display: flex;
     flex-direction: column;
     gap: 4px;
