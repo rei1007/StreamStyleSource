@@ -16,13 +16,6 @@
                 "logo": "image/boothlogo.svg",
                 "alt": "BOOTHロゴ",
                 "text": "れーの部屋"
-            },
-            {
-                "href": "https://ofuse.me/rei1007/",
-                "alabel": "OFUSEプロフィール",
-                "logo": "image/ofuselogo.webp",
-                "alt": "OFUSEロゴ",
-                "text": "OFUSEで支援"
             }
         ]
     },

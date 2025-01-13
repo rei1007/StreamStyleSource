@@ -40,6 +40,12 @@ document.addEventListener("DOMContentLoaded", function () {
 					<p>${footerData.contact.text}</p>
 				</div>
 			</div>
+
+			<div id="ofuse">
+                <a href="https://ofuse.me/rei1007" aria-label="OFUSEで支援"></a>
+                <img src="https://streamstylesource.pages.dev/image/ofuselogo.webp" alt="OFUSEロゴ">
+                <p>OFUSEで支援</p>
+            </div>
 			
 			<p id="copy_right">${footerData.copyright}</p>
 		`;
