@@ -8,17 +8,17 @@
 
 .contents_card {
     flex: 1; /* 追加 */
-    flex-basis: calc((100% / 2) -12px);
-    max-width: calc((100% / 2) -12px);
+    flex-basis: calc((100% / 2) - 12px);
+    max-width: calc((100% / 2) - 12px);
     min-width: 160px;
 
-    @media (min-width: 552px) and (max-width: 721px) {
-        flex-basis: calc((100% / 3) -24px);
-        max-width: calc((100% / 3) -24px);
+    @media (min-width: 620px) and (max-width: 999px) {
+        flex-basis: calc((100% / 3) - 24px);
+        max-width: calc((100% / 3) - 24px);
     }
-    @media (min-width: 1001px) {
-        flex-basis: calc((100% / 4) -36px);
-        max-width: calc((100% / 4) -36px);
+    @media (min-width: 1000px) {
+        flex-basis: calc((100% / 4) - 36px);
+        max-width: calc((100% / 4) - 36px);
         min-width: 200px;
     }
 }
