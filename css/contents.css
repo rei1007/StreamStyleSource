@@ -16,7 +16,7 @@
         flex-basis: calc((100% / 3) - 24px);
         max-width: calc((100% / 3) - 24px);
     }
-    @media (min-width: px) {
+    @media (min-width: 1000px) {
         flex-basis: calc((100% / 4) - 36px);
         max-width: calc((100% / 4) - 36px);
         min-width: 200px;
