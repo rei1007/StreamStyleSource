@@ -431,6 +431,7 @@ h4 {
         display: flex;
         gap: 1rem;
         margin-left:auto;
+        flex-wrap: wrap;
     }
     button {
         display: flex;
