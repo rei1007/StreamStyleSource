@@ -4,7 +4,7 @@
             "title": "マテリアル時計 追加",
             "link": "https://streamstylesource.pages.dev/contents/material-clock.html",
             "content": "「マテリアル時計」を追加しました。シンプルなデザインのため、どのようなシュチュエーションでも使いやすいものとなっています。",
-            "date": "2025/03/31",
+            "date": "2025/01/13",
             "chips": [
                 {
                     "type": "date_chip",
@@ -28,7 +28,7 @@
             "chips": [
                 {
                     "type": "date_chip",
-                    "text": "2025/01/09"
+                    "text": "2025/01/08"
                 },
                 {
                     "type": "info_chip",
