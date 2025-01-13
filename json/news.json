@@ -8,7 +8,7 @@
             "chips": [
                 {
                     "type": "date_chip",
-                    "text": "2025/03/31"
+                    "text": "2025/01/13"
                 },
                 {
                     "type": "bs_chip",
@@ -28,7 +28,7 @@
             "chips": [
                 {
                     "type": "date_chip",
-                    "text": "2025/03/30"
+                    "text": "2025/01/09"
                 },
                 {
                     "type": "info_chip",
