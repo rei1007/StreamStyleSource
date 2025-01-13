@@ -119,7 +119,7 @@
             "link": null
         }
     ],
-    "contents-listPageNavItems": [
+    "contentsPageNavItems": [
         {
             "type": "link",
             "icon": "material-symbols-rounded",
@@ -269,7 +269,7 @@
             "link": null
         }
     ],
-    "contents-listPageMobileNavItems": [
+    "contentsPageMobileNavItems": [
         {
             "type": "link",
             "icon": "material-symbols-rounded",
