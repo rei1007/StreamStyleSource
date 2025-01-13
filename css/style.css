@@ -323,10 +323,10 @@ header {
     grid-template-columns: 2rem auto;
     align-items: center;
     gap: 0.5rem;
-    margin: 0 auto 12px;
     border-radius: 12px;
-    background-color: var(--container-surface);
+    background-color: var(--tertiary-container);
     padding: 0 1rem;
+    width: 100%;
     max-width: var(--max-width);
     overflow-x: hidden;
 
@@ -362,7 +362,7 @@ header {
     }
 }
 .important_tip {
-    background-color: var(--important-surface);
+    background-color: var(--important-container);
 
     ::before {
         background-color: var(--important);

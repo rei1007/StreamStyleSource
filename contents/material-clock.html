@@ -52,91 +52,107 @@
                 </div>
             </div>
 
-            <div class="card">
-                <h4>カスタマイズ設定</h4>
-                <div id="custom_wrap">
-                    <iframe id="test" src="https://sss-contents.pages.dev/material-clock.html"></iframe>
-                    <div id="custom_input">
-                        <div id="switch_container">
-                            <div id="switch_live" class="switch_box form_content">
-                                <label for="live-display-toggle" class="form_label">Live表示</label>
-                                <label class="switch">
-                                    <input type="checkbox" id="live-display-toggle" data-status="on" checked>
-                                    <span class="slider round"></span>
-                                </label>
+            <div id="custom_page_wrap">
+                <div class="card">
+                    <h4>カスタマイズ設定</h4>
+                    <div id="custom_wrap">
+                        <iframe id="test" src="https://sss-contents.pages.dev/material-clock.html"></iframe>
+                        <div id="custom_input">
+                            <div id="switch_container">
+                                <div id="switch_live" class="switch_box form_content">
+                                    <label for="live-display-toggle" class="form_label">Live表示</label>
+                                    <label class="switch">
+                                        <input type="checkbox" id="live-display-toggle" data-status="on" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                                <div id="switch_sec" class="switch_box form_content">
+                                    <label for="sec-display-toggle" class="form_label">秒数表示</label>
+                                    <label class="switch">
+                                        <input type="checkbox" id="sec-display-toggle" data-status="on" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                                <div id="switch_date" class="switch_box form_content">
+                                    <label for="date-display-toggle" class="form_label">時刻のみ</label>
+                                    <label class="switch">
+                                        <input type="checkbox" id="date-display-toggle" data-status="on">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
                             </div>
-                            <div id="switch_sec" class="switch_box form_content">
-                                <label for="sec-display-toggle" class="form_label">秒数表示</label>
-                                <label class="switch">
-                                    <input type="checkbox" id="sec-display-toggle" data-status="on" checked>
-                                    <span class="slider round"></span>
-                                </label>
+                            <hr>
+                            <div id="presets">
+                                <label class="form_label">プリセット</label>
+                                <button class="preset-button" data-preset="default">デフォルト</button>
+                                <button class="preset-button" data-preset="darkmode">ダークモード</button>
+                                <button class="preset-button" data-preset="gray">グレー</button>
+                                <button class="preset-button" data-preset="blue">ブルー</button>
+                                <button class="preset-button" data-preset="red">レッド</button>
+                                <button class="preset-button" data-preset="yellow">イエロー</button>
+                                <button class="preset-button" data-preset="green">グリーン</button>
+                                <button class="preset-button" data-preset="purple">パープル</button>
+                                <button class="preset-button" data-preset="orange">オレンジ</button>
+                                <button class="preset-button" data-preset="wood">ウッド</button>
                             </div>
-                            <div id="switch_date" class="switch_box form_content">
-                                <label for="date-display-toggle" class="form_label">時刻のみ</label>
-                                <label class="switch">
-                                    <input type="checkbox" id="date-display-toggle" data-status="on">
-                                    <span class="slider round"></span>
-                                </label>
-                            </div>
-                        </div>
-                        <hr>
-                        <div id="presets">
-                            <label class="form_label">プリセット</label>
-                            <button class="preset-button" data-preset="default">デフォルト</button>
-                            <button class="preset-button" data-preset="darkmode">ダークモード</button>
-                            <button class="preset-button" data-preset="gray">グレー</button>
-                            <button class="preset-button" data-preset="blue">ブルー</button>
-                            <button class="preset-button" data-preset="red">レッド</button>
-                            <button class="preset-button" data-preset="yellow">イエロー</button>
-                            <button class="preset-button" data-preset="green">グリーン</button>
-                            <button class="preset-button" data-preset="purple">パープル</button>
-                            <button class="preset-button" data-preset="orange">オレンジ</button>
-                            <button class="preset-button" data-preset="wood">ウッド</button>
-                        </div>
-                        <hr>
-                        <div id="color_form">
-                            <div class="form_content">
-                                <label for="change-time-container-bg" class="form_label">全体背景色</label>
-                                <input id="change-time-container-bg" class="form-input" type="color" value="#ffffff">
-                            </div>
-                            <div class="form_content">
-                                <label for="change-live-color" class="form_label">Liveの文字色</label>
-                                <input id="change-live-color" class="form-input" type="color" value="#000000">
-                            </div>
-                            <div class="form_content">
-                                <label for="change-date-color" class="form_label">日付の文字色</label>
-                                <input id="change-date-color" class="form-input" type="color" value="#ffffff">
-                            </div>
-                            <div class="form_content">
-                                <label for="change-date-bg" class="form_label">日付の背景色</label>
-                                <input id="change-date-bg" class="form-input" type="color" value="#000000">
-                            </div>
-                            <div class="form_content">
-                                <label for="change-time-color" class="form_label">時間の文字色</label>
-                                <input id="change-time-color" class="form-input" type="color" value="#000000">
-                            </div>
-                            <div class="form_content">
-                                <label for="change-time-bg" class="form_label">時間の背景色</label>
-                                <input id="change-time-bg" class="form-input" type="color" value="#ffffff">
+                            <hr>
+                            <div id="color_form">
+                                <div class="form_content">
+                                    <label for="change-time-container-bg" class="form_label">全体背景色</label>
+                                    <input id="change-time-container-bg" class="form-input" type="color" value="#ffffff">
+                                </div>
+                                <div class="form_content">
+                                    <label for="change-live-color" class="form_label">Liveの文字色</label>
+                                    <input id="change-live-color" class="form-input" type="color" value="#000000">
+                                </div>
+                                <div class="form_content">
+                                    <label for="change-date-color" class="form_label">日付の文字色</label>
+                                    <input id="change-date-color" class="form-input" type="color" value="#ffffff">
+                                </div>
+                                <div class="form_content">
+                                    <label for="change-date-bg" class="form_label">日付の背景色</label>
+                                    <input id="change-date-bg" class="form-input" type="color" value="#000000">
+                                </div>
+                                <div class="form_content">
+                                    <label for="change-time-color" class="form_label">時間の文字色</label>
+                                    <input id="change-time-color" class="form-input" type="color" value="#000000">
+                                </div>
+                                <div class="form_content">
+                                    <label for="change-time-bg" class="form_label">時間の背景色</label>
+                                    <input id="change-time-bg" class="form-input" type="color" value="#ffffff">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="card">
-                <h4>設定適用済みソース</h4>
-                <p>リンク</p>
-                <div class="clipboard_link">
-                    <input id="url_output" type="text" value="https://sss-contents.pages.dev/material-clock/" readonly>
-                    <button onclick="copyToClipboard(this)"><span class="material-symbols-rounded">content_copy</span></button>
+    
+                <div class="card page_end">
+                    <h4>ソース</h4>
+                    <p>幅：250px<br>高さ160px (時刻のみ表示時115px)</p>
+                    <p>URL</p>
+                    <div class="clipboard_link">
+                        <input type="text" value="https://sss-contents.pages.dev/material-clock/" readonly>
+                        <button onclick="copyToClipboard(this)"><span class="material-symbols-rounded">content_copy</span></button>
+                    </div>
+                    <p>URL(設定反映済み)</p>
+                    <div class="clipboard_link">
+                        <input id="url_output" type="text" value="https://sss-contents.pages.dev/material-clock/" readonly>
+                        <button onclick="copyToClipboard(this)"><span class="material-symbols-rounded">content_copy</span></button>
+                    </div>
+                    <p>カスタムCSS</p>
+                    <div class="clipboard_link_css">
+                        <textarea id="css_output" rows="5" readonly></textarea>
+                        <button onclick="copyToClipboard(this)"><span class="material-symbols-rounded">content_copy</span></button>
+                    </div>
+                    <!--
+                    <div class="tip page_end">
+                        <span class="material-symbols-rounded">help</span>
+                        <p>詳しい設定方法はこちら</p>
+                    </div>
+                    -->
                 </div>
-                <p>カスタムCSS</p>
-                <div class="clipboard_link_css">
-                    <textarea id="css_output" rows="5" readonly></textarea>
-                    <button onclick="copyToClipboard(this)"><span class="material-symbols-rounded">content_copy</span></button>
-                </div>
             </div>
+            
         </div>
 
         <!--フッター-->
@@ -145,6 +161,6 @@
         <script src="../script/script.js"></script>
         <script src="../script/nav.js"></script>
         <script src="../script/contents.js"></script>
-        <script src="script/contents-page.js"></script>
+        <script src="script/material-clock.js"></script>
     </body>
 </html>
