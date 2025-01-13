@@ -12,7 +12,7 @@
             "icon": "material-symbols-rounded",
             "iconName": "category",
             "text": "コンテンツ",
-            "link": "contents.html"
+            "link": "contents-list.html"
         },
         {
             "type": "link",
@@ -29,7 +29,7 @@
             "link": "terms.html"
         }
     ],
-    "contentsNavItems": [
+    "contents-listNavItems": [
         {
             "type": "link",
             "icon": "material-symbols-rounded",
@@ -72,7 +72,7 @@
             "icon": "material-symbols-rounded",
             "iconName": "category",
             "text": "コンテンツ",
-            "link": "contents.html"
+            "link": "contents-list.html"
         },
         {
             "type": "current",
@@ -102,7 +102,7 @@
             "icon": "material-symbols-rounded",
             "iconName": "category",
             "text": "コンテンツ",
-            "link": "contents.html"
+            "link": "contents-list.html"
         },
         {
             "type": "link",
@@ -119,7 +119,7 @@
             "link": null
         }
     ],
-    "contentsPageNavItems": [
+    "contents-listPageNavItems": [
         {
             "type": "link",
             "icon": "material-symbols-rounded",
@@ -132,7 +132,7 @@
             "icon": "material-symbols-rounded",
             "iconName": "category",
             "text": "コンテンツ",
-            "link": "contents.html"
+            "link": "contents-list.html"
         },
         {
             "type": "link",
@@ -162,7 +162,7 @@
             "icon": "material-symbols-rounded",
             "iconName": "category",
             "text": "コンテンツ",
-            "link": "contents.html"
+            "link": "contents-list.html"
         },
         {
             "type": "link",
@@ -179,7 +179,7 @@
             "link": "terms.html"
         }
     ],
-    "contentsMobileNavItems": [
+    "contents-listMobileNavItems": [
         {
             "type": "link",
             "icon": "material-symbols-rounded",
@@ -222,7 +222,7 @@
             "icon": "material-symbols-rounded",
             "iconName": "category",
             "text": "コンテンツ",
-            "link": "contents.html"
+            "link": "contents-list.html"
         },
         {
             "type": "current",
@@ -252,7 +252,7 @@
             "icon": "material-symbols-rounded",
             "iconName": "category",
             "text": "コンテンツ",
-            "link": "contents.html"
+            "link": "contents-list.html"
         },
         {
             "type": "link",
@@ -269,7 +269,7 @@
             "link": null
         }
     ],
-    "contentsPageMobileNavItems": [
+    "contents-listPageMobileNavItems": [
         {
             "type": "link",
             "icon": "material-symbols-rounded",
@@ -282,7 +282,7 @@
             "icon": "material-symbols-rounded",
             "iconName": "category",
             "text": "コンテンツ",
-            "link": "contents.html"
+            "link": "contents-list.html"
         },
         {
             "type": "link",
