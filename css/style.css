@@ -250,13 +250,12 @@ header {
     max-width: var(--max-width);
     height: fit-content;
     color: var(--on-surface);
-
-    h4 {
-        color: var(--secondary);
-        font-weight: 700;
-        font-size: 1.25rem;
-        line-height: 150%;
-    }
+}
+h4 {
+    color: var(--secondary);
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 150%;
 }
 .card_title {
     display: flex;

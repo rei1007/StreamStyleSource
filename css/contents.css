@@ -16,7 +16,7 @@
         flex-basis: calc((100% / 3) - 24px);
         max-width: calc((100% / 3) - 24px);
     }
-    @media (min-width: 1000px) {
+    @media (min-width: px) {
         flex-basis: calc((100% / 4) - 36px);
         max-width: calc((100% / 4) - 36px);
         min-width: 200px;
@@ -26,10 +26,6 @@
 .contents_card {
     margin: 0;
 
-    h4 {
-        font-size: 1.2rem;
-        line-height: 150%;
-    }
     p {
         width: fit-content;
         color: var(--on-surface);

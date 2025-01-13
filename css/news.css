@@ -11,7 +11,7 @@
     color: var(--on-surface);
 
     p {
-        font-size: 1rem;
+        font-size: 0.9rem;
         line-height: 150%;
     }
     hr {
@@ -22,17 +22,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 12px;
 
-    h4 {
-        font-size: 1.5rem;
-        color: var(--secondary);
-        font-weight: 700;
-        line-height: 150%;
-    }
     a {
         border-radius: 12px;
-        padding: 4px 12px;
+        padding: 2px 6px;
         font-size: 1rem;
         line-height: 150%;
         text-decoration: none;
@@ -47,7 +40,7 @@
     .chip {
         width: fit-content;
         padding: 4px 12px;
-        font-size: 1rem;
+        font-size: 0.8rem;
         line-height: 150%;
         border-radius: calc(0.5rem * 1.5 + 4px);
     }
