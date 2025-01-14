@@ -486,7 +486,7 @@ h4 {
 #ofuse {
     margin: 12px 0;
     background-color: #2882A7;
-    padding: 12px;
+    padding: 4px 12px 4px 8px;
     border-radius: 12px;
     display: flex;
     gap: 0.5rem;

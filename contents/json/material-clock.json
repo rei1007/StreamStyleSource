@@ -1,9 +1,9 @@
 {
     "default": {
         "--time-container-bg": "#ffffff",
-        "--live-color": "#000000",
+        "--live-color": "#1a1a1a",
         "--date-color": "#ffffff",
-        "--date-bg": "#000000",
+        "--date-bg": "#2f2f2f",
         "--time-color": "#000000",
         "--time-bg": "#e0e0e0"
     },
@@ -11,9 +11,9 @@
         "--time-container-bg": "#212121",
         "--live-color": "#ffffff",
         "--date-color": "#ffffff",
-        "--date-bg": "#333333",
+        "--date-bg": "#404040",
         "--time-color": "#ffffff",
-        "--time-bg": "#424242"
+        "--time-bg": "#4d4d4d"
     },
     "gray": {
         "--time-container-bg": "#f0f0f0",
@@ -26,15 +26,15 @@
     "blue": {
         "--time-container-bg": "#e3f2fd",
         "--live-color": "#1976d2",
-        "--date-color": "#212121",
+        "--date-color": "#1976d2",
         "--date-bg": "#bbdefb",
         "--time-color": "#0d47a1",
-        "--time-bg": "#90caf9"
+        "--time-bg": "#addaff"
     },
     "red": {
         "--time-container-bg": "#ffebee",
         "--live-color": "#d32f2f",
-        "--date-color": "#212121",
+        "--date-color": "#ffffff",
         "--date-bg": "#ef9a9a",
         "--time-color": "#b71c1c",
         "--time-bg": "#ffcdd2"
@@ -42,7 +42,7 @@
     "yellow": {
         "--time-container-bg": "#fffde7",
         "--live-color": "#fbc02d",
-        "--date-color": "#212121",
+        "--date-color": "#fbc02d",
         "--date-bg": "#fff9c4",
         "--time-color": "#f9a825",
         "--time-bg": "#fff59d"
@@ -50,15 +50,15 @@
     "green": {
         "--time-container-bg": "#e8f5e9",
         "--live-color": "#388e3c",
-        "--date-color": "#212121",
-        "--date-bg": "#a5d6a7",
+        "--date-color": "#ffffff",
+        "--date-bg": "#8bbb8d",
         "--time-color": "#1b5e20",
         "--time-bg": "#c8e6c9"
     },
     "purple": {
         "--time-container-bg": "#f3e5f5",
         "--live-color": "#7b1fa2",
-        "--date-color": "#212121",
+        "--date-color": "#7b1fa2",
         "--date-bg": "#e1bee7",
         "--time-color": "#4a148c",
         "--time-bg": "#ce93d8"
@@ -66,17 +66,25 @@
     "orange": {
         "--time-container-bg": "#fff3e0",
         "--live-color": "#ef6c00",
-        "--date-color": "#212121",
+        "--date-color": "#ef6c00",
         "--date-bg": "#ffd5b4",
         "--time-color": "#e65100",
         "--time-bg": "#ffcc80"
     },
     "wood": {
-        "--time-container-bg": "#a0522d",
-        "--live-color": "#f5deb3",
+        "--time-container-bg": "#fde3ce",
+        "--live-color": "#764712",
         "--date-color": "#f5deb3",
         "--date-bg": "#ae6c3d",
         "--time-color": "#48260f",
         "--time-bg": "#d2b48c"
+    },
+    "cyber": {
+        "--time-container-bg": "#051824",
+        "--live-color": "#27e9b5",
+        "--date-color": "#051824",
+        "--date-bg": "#27e9b5",
+        "--time-color": "#27e9b5",
+        "--time-bg": "#00ffbb"
     }
 }
