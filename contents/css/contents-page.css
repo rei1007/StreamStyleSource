@@ -1,8 +1,8 @@
 #custom_page_wrap {
     @media (min-width: 1200px){
         display: grid;
-        gap: 12px;
         grid-template-columns: 720px auto;
+        gap: 12px;
     }
 }
 
@@ -192,16 +192,17 @@
 }
 
 .download_card {
-    margin-top: 12px;
-    background-color: #fc4d50;
-    padding: 12px;
-    border-radius: 12px;
     display: flex;
-    gap: 0.5rem;
+    position: relative;
     justify-content: center;
     align-items: center;
+    gap: 0.5rem;
+    margin-top: 12px;
+    border-radius: 12px;
+    background-color: #fc4d50;
+    padding: 12px 16px 12px 12px;
     width: fit-content;
-    position: relative;
+    color: var(--on-primary);
 
     a {
         position: absolute;
@@ -211,9 +212,9 @@
         height: 100%;
     }
     img {
+        border-radius: 6px;
         width: 2rem;
         height: 2rem;
-        border-radius: 6px;
     }
     p {
         font-size: 1rem;
