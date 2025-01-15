@@ -10,13 +10,14 @@
     display: flex;
     align-items: center;
     gap: 24px;
+    margin: 0 auto 12px;
     border-radius: 12px;
     background-color: var(--background);
     padding: 1rem;
+    max-width: var(--max-width);
     color: var(--on-surface);
     font-size: 1rem;
     line-height: 150%;
-
     @media (max-width: 800px) {
         flex-wrap: wrap;
     }
@@ -167,7 +168,7 @@
     position: relative;
     grid-template-columns: auto calc(8px + 1.5rem);
     width: 100%;
-    height: fit-content;
+    height: 150px;
     line-height: 150%;
 
     textarea {
@@ -197,10 +198,9 @@
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
-    margin-top: 12px;
     border-radius: 12px;
     background-color: #fc4d50;
-    padding: 12px 16px 12px 12px;
+    padding: 4px 12px 4px 8px;
     width: fit-content;
     color: var(--on-primary);
 
