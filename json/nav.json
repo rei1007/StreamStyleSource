@@ -11,7 +11,7 @@
             "type": "link",
             "icon": "material-symbols-rounded",
             "iconName": "category",
-            "text": "コンテンツ",
+            "text": "アイテム",
             "link": "item-list.html"
         },
         {
@@ -41,7 +41,7 @@
             "type": "current",
             "icon": "material-symbols-rounded fill",
             "iconName": "category",
-            "text": "コンテンツ",
+            "text": "アイテム",
             "link": null
         },
         {
@@ -71,7 +71,7 @@
             "type": "link",
             "icon": "material-symbols-rounded",
             "iconName": "category",
-            "text": "コンテンツ",
+            "text": "アイテム",
             "link": "item-list.html"
         },
         {
@@ -101,7 +101,7 @@
             "type": "link",
             "icon": "material-symbols-rounded",
             "iconName": "category",
-            "text": "コンテンツ",
+            "text": "アイテム",
             "link": "item-list.html"
         },
         {
@@ -131,7 +131,7 @@
             "type": "link",
             "icon": "material-symbols-rounded",
             "iconName": "category",
-            "text": "コンテンツ",
+            "text": "アイテム",
             "link": "item-list.html"
         },
         {
@@ -161,7 +161,7 @@
             "type": "link",
             "icon": "material-symbols-rounded",
             "iconName": "category",
-            "text": "コンテンツ",
+            "text": "アイテム",
             "link": "item-list.html"
         },
         {
@@ -191,7 +191,7 @@
             "type": "current",
             "icon": "material-symbols-rounded fill",
             "iconName": "category",
-            "text": "コンテンツ",
+            "text": "アイテム",
             "link": null
         },
         {
@@ -221,7 +221,7 @@
             "type": "link",
             "icon": "material-symbols-rounded",
             "iconName": "category",
-            "text": "コンテンツ",
+            "text": "アイテム",
             "link": "item-list.html"
         },
         {
@@ -251,7 +251,7 @@
             "type": "link",
             "icon": "material-symbols-rounded",
             "iconName": "category",
-            "text": "コンテンツ",
+            "text": "アイテム",
             "link": "item-list.html"
         },
         {
@@ -281,7 +281,7 @@
             "type": "link",
             "icon": "material-symbols-rounded",
             "iconName": "category",
-            "text": "コンテンツ",
+            "text": "アイテム",
             "link": "item-list.html"
         },
         {
