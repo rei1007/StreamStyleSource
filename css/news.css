@@ -1,6 +1,9 @@
 @import url(property.css);
 
 .news_card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
     margin: 12px auto 0;
     border-radius: 12px;
     background-color: var(--container-surface);
@@ -13,9 +16,6 @@
     p {
         font-size: 0.9rem;
         line-height: 150%;
-    }
-    hr {
-        margin: 12px 0;
     }
 }
 .news_title {
