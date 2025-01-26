@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <title>ガラス時計 by 配信StyleSource</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--検索-->
+        <meta name="description" content="OBS配信用のデジタル時計です。すりガラス風のデザインで、おしゃれな配信画面を演出できます。">
+        <meta name="keywords" content="OBS, 配信用デジタル時計, ガラス, ブラウザソース, 配信素材, Vtuber, 無料, ダウンロード, 配信画面, カスタマイズ">
+        <!--OGP-->
+        <meta property="og:title" content="ガラス時計 by 配信StyleSource">
+        <meta property="og:description" content="OBS配信用のデジタル時計です。すりガラス風のデザインで、おしゃれな配信画面を演出できます。">
+        <meta property="og:url" content="https://streamstylesource.pages.dev/items/glass-clock/">
+        <meta property="og:image" content="https://streamstylesource.pages.dev/image/material-clock.webp">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="配信StyleSource">
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-R3HKWDQ0KC"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-R3HKWDQ0KC');
+        </script>
+        <!--外部ファイル-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,300..400,0..1,0&display=swap" media="print" onload="this.media='all'">
+        <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+        <link href="https://unpkg.com/@acab/reset.css" rel="stylesheet">
+        <link href="../css/style.css" rel="stylesheet">
+        <link href="../css/item-list.css" rel="stylesheet">
+        <link href="css/item-page.css" rel="stylesheet">
+    </head>
+    <body>
+        <!--共通-->
+        <div id="load">
+            <div class="loader"></div>
+        </div>
+        <header>
+            <span class="material-symbols-rounded fill">stream</span>
+            <h1>配信StyleSource</h1>
+        </header>
+        <nav id="nav_PC"></nav>
+        <nav id="nav_mobile"></nav>
+
+        <!--ページ-->
+        <div id="page">
+            <div class="card">
+                <div class="card_title">
+                    <span class="material-symbols-rounded">schedule</span>
+                    <h3>ガラス時計</h3>
+                </div>
+            </div>
+
+            <div id="custom_page_wrap">
+                <div class="card">
+                    <h4>ソース</h4>
+                    <p>幅500px<br>高さ：200px</p>
+                    <p>URL(設定反映済み)</p>
+                    <div class="clipboard_link">
+                        <input id="url_output" type="text" value="https://sss-contents.pages.dev/material-clock/" readonly>
+                        <button onclick="copyToClipboard(this)"><span class="material-symbols-rounded">content_copy</span></button>
+                    </div>
+                    <p>カスタムCSS(設定反映済み)</p>
+                    <div class="clipboard_link_css">
+                        <textarea id="css_output" rows="5" readonly></textarea>
+                        <button onclick="copyToClipboard(this)"><span class="material-symbols-rounded">content_copy</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card page_end">
+                <h4>利用方法</h4>
+                <p>
+                    OBSのブラウザソース設定画面のURL欄にURL(設定反映済み)をコピペしてください。<br>
+                    幅は250px、高さは160pxが推奨値です。ただし時間のみ表示する場合は115pxを推奨します。もしこれらの値を入力してレイアウトが崩れる場合は数値を調整するか、大きめに設定した後にクリッピングするなどしてください。
+                </p>
+                <p>
+                    BOOTHからファイルをダウンロードしていただくと遅延の設定やフォントの変更もできるようになります。詳しくは下のリンクからご確認ください。
+                </p>
+                <div class="download_card">
+                    <a href="https://rei-1007.booth.pm/items/6486359" aria-label="BOOTH商品ページ"></a>
+                    <img src="https://streamstylesource.pages.dev/image/boothlogo.svg" alt="BOOTHロゴ">
+                    <p>ダウンロードはこちら</p>
+                </div>
+            </div>
+            
+        </div>
+        
+
+        <!--フッター-->
+        <footer id="footer"></footer>
+        
+        <script src="../script/script.js"></script>
+        <script src="../script/nav.js"></script>
+        <script src="../script/item-page.js"></script>
+        <script src="script/material-clock.js"></script>
+    </body>
+</html>
